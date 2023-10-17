@@ -8,7 +8,7 @@ const Navbar = () => {
         <NavLink
           to='/'
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-white font-bold bg-red-600" : ""
+            isPending ? "pending" : isActive ? "text-white font-bold bg-blue-900" : ""
           }>
           HOME
         </NavLink>
@@ -17,7 +17,7 @@ const Navbar = () => {
         <NavLink
           to='/about'
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-white font-bold bg-red-600" : ""
+            isPending ? "pending" : isActive ? "text-white font-bold bg-blue-900" : ""
           }>
           ABOUT
         </NavLink>
@@ -26,7 +26,7 @@ const Navbar = () => {
         <NavLink
           to='/cart'
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-white font-bold bg-red-600" : ""
+            isPending ? "pending" : isActive ? "text-white font-bold bg-blue-900" : ""
           }>
         CART
         </NavLink>
@@ -35,7 +35,7 @@ const Navbar = () => {
         <NavLink
           to='/sponsor'
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-white font-bold bg-red-600" : ""
+            isPending ? "pending" : isActive ? "text-white font-bold bg-blue-900" : ""
           }>
         SPONSOR
         </NavLink>
@@ -43,7 +43,7 @@ const Navbar = () => {
         </>
     )
   return (
-    <div>
+    <div className="container mx-auto">
       <div className='navbar bg-base-100'>
         <div className='navbar-start'>
           <div className='dropdown'>

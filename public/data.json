@@ -1,0 +1,56 @@
+[
+    {
+      "id": "1",
+      "image": "https://i.ibb.co/pf9YLwk/f1.jpg",
+      "brand_name":"Adidas",
+      "name": "Cartoon Astronaut T-shirt",
+      "details": "Valorant is a free-to-play first-person tactical hero shooter developed and published by Riot Games.",
+      "price": 299,
+      "rating": 4
+    },
+    {
+      "id": "2",
+      "image": "https://i.ibb.co/Sv35PxN/f2.jpg",
+      "brand_name":"Nike",
+      "name": "Cartoon Astronaut T-shirt",
+      "details": "Call of Duty: Warzone was a free-to-play battle royale video game developed by Raven Software and Infinity Ward.",
+      "price": 299,
+      "rating": 4
+    },
+    {
+      "id": "3",
+      "image": "https://i.ibb.co/Mk076gk/f8.jpg",
+      "brand_name":"Nike",
+      "name": "Cartoon Astronaut T-shirt",
+      "details": "Dota 2 is a sequel to Defense of the Ancients, a community-created mod for Blizzard Entertainment's Warcraft III: Reign of Chaos.",
+      "price": 399,
+      "rating": 4     
+    },
+    {
+      "id": "4",
+      "image": "https://i.ibb.co/hWZ6gF5/n5.jpg",
+      "brand_name":"Nike",
+      "name": "Cartoon Astronaut T-shirt",
+      "details": "Counter-Strike is a series of multiplayer tactical first-person shooter video games in which teams of terrorists battle to perpetrate.",
+      "price": 499,
+      "rating": 4  
+    },
+    {
+      "id": "5",
+      "image": "https://i.ibb.co/NCBDPxd/f6.jpg",
+      "brand_name":"Nike",
+      "name": "Cartoon Astronaut T-shirt",
+      "details": "Apex Legends is a free-to-play battle royale-hero shooter game developed by Respawn Entertainment,published by Electronic Arts.",
+      "price": 299,
+      "rating": 4  
+    },
+    {
+      "id": "6",
+      "image": "https://i.ibb.co/0rF0W1q/f4.jpg",
+      "brand_name":"Nike",
+      "name": "Cartoon Astronaut T-shirt",
+      "details": "Among Us is a 2018 online multiplayer social deduction game developed and published by American game studio Innersloth.",
+      "price": 199,
+      "rating": 4  
+    }
+  ]

@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 
-
 const Login = () => {
   return (
     <div>
       <div className='hero min-h-screen bg-base-200'>
-        <div className='hero-content flex-col lg:flex-row-reverse'>
+        <div className='hero-content flex-col '>
           <div className='text-center lg:text-left'>
             <h1 className='text-5xl font-bold'>Login now!</h1>
           </div>
@@ -13,9 +12,22 @@ const Login = () => {
             <form className='card-body'>
               <div className='form-control'>
                 <label className='label'>
+                  <span className='label-text'>Name</span>
+                </label>
+                <input
+                  name='name'
+                  type='text'
+                  placeholder='Name'
+                  className='input input-bordered'
+                  required
+                />
+              </div>
+              <div className='form-control'>
+                <label className='label'>
                   <span className='label-text'>Email</span>
                 </label>
                 <input
+                  name='email'
                   type='email'
                   placeholder='email'
                   className='input input-bordered'
@@ -27,23 +39,24 @@ const Login = () => {
                   <span className='label-text'>Password</span>
                 </label>
                 <input
+                  name='password'
                   type='password'
                   placeholder='password'
                   className='input input-bordered'
                   required
                 />
-                <label className='label'>
-                  <a href='#' className='label-text-alt link link-hover'>
-                    Forgot password?
-                  </a>
-                </label>
               </div>
               <div className='form-control mt-6'>
                 <button className='btn btn-primary'>Login</button>
               </div>
-              <p className="p-4">Do not have an account?
-              <Link className="text-pink-700 font-semibold ml-2" to='/register'>Register</Link>
-            </p>
+              <p className='p-4'>
+                Do not have an account?
+                <Link
+                  className='text-pink-700 font-semibold ml-2'
+                  to='/register'>
+                  Register
+                </Link>
+              </p>
             </form>
           </div>
         </div>
