@@ -15,11 +15,11 @@ const Navbar = () => {
       </li>
         <li className="font-bold">
         <NavLink
-          to='/about'
+          to='/addProducts'
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-white font-bold bg-blue-900" : ""
           }>
-          ABOUT
+          Add Products
         </NavLink>
       </li>
         <li className="font-bold">

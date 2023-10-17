@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
           <p>Rating: {rating}</p>
           <p>Price: ${price}</p>
           <div className='card-actions'>
-            <button className='btn btn-primary'>Check Now</button>
+            <button className='btn btn-primary'>Check Details</button>
           </div>
         </div>
       </div>
