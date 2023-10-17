@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 
 const AddProducts = () => {
     const handleAddProducts = e =>{
@@ -5,15 +6,35 @@ const AddProducts = () => {
 
         const form = e.target;
         const brand = form.brand.value;
-        const product = form.product.value;
+        const name = form.name.value;
         const details = form.details.value;
         const rating = form.rating.value;
         const price = form.price.value;
         const photo = form.photo.value;
 
-        const newProducts = {brand, product,details, rating, price, photo}
+        const newProducts = {brand, name,details, rating, price, photo}
         console.log(newProducts)
 
+        // send data to the server
+        fetch('http://localhost:5000/products',{
+            method: 'POST',
+            headers: {
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(newProducts)
+        })
+        .then(res=> res.json())
+        .then(data =>{
+            console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Thanks for choosing us',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+            }
+        })
     }
     return (
         <div className="container mx-auto mt-20">
@@ -41,7 +62,7 @@ const AddProducts = () => {
             </label>
             <label className='input-group'>             
               <input
-                name='product'
+                name='name'
                 type='text'
                 placeholder='Product Name'
                 className='input input-bordered w-full'

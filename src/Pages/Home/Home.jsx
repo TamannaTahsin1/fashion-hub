@@ -6,7 +6,7 @@ import Footer from "../../Components/Footer/Footer";
 
 const Home = () => {
     const products = useLoaderData()
-
+    console.log(products)
 
     return (
         <div>
