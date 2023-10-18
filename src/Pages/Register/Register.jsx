@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Components/Providers/AuthProvider";
 import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 const Register = () => {
   // error
@@ -23,25 +24,21 @@ const Register = () => {
     console.log(name, email, password);
     // for password validation
     if (password.length < 6) {
-      toast.error("Password should be at least 6 characters", {
-        style: {
-          borderRadius: "10px",
-          background: "#333",
-          color: "#fff",
-        },
-      });
+      Swal.fire({
+        title: 'Oops!',
+        text: 'Password should be at least one block latter and special character!',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+      })
       return;
+      // "Password should be at least one block latter and special character",
     } else if (!/^[a-zA-Z0-9._%+-]/.test(password)) {
-      toast.error(
-        "Password should be at least one block latter and special character",
-        {
-          style: {
-            borderRadius: "10px",
-            background: "#333",
-            color: "#fff",
-          },
-        }
-      );
+      Swal.fire({
+        title: 'Oops!',
+        text: 'Password should be at least one block latter and special character!',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+      })
       return;
     }
     // reset success and error
@@ -50,15 +47,32 @@ const Register = () => {
     // create user
     createUser(email, password).then((result) => {
       console.log(result.user);
-      toast.success("User Created Successfully!", {
-        icon: "👏",
-        style: {
-          borderRadius: "10px",
-          background: "#333",
-          color: "#fff",
+      Swal.fire({
+        title: 'Success!',
+        text: 'User Created Successfully!',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
+      // new user has been created  
+      const user = {name, email}
+      fetch('http://localhost:5000/user',{
+        method:'POST',
+        headers: {
+          'content-type' : 'application/json'
         },
-      });
-      // new user has been created
+        body: JSON.stringify(user)
+      })
+      .then(res => res.json())
+      .then(data =>{
+        if(data.insertedId){
+          Swal.fire({
+            title: 'Success!',
+            text: 'User added to the database',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+          })
+        }
+      })
     });
   };
   return (
