@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-
+import iconImg from '../../assets/logo.png'
 
 const Navbar = () => {
     const navLinks = (
@@ -19,7 +19,7 @@ const Navbar = () => {
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-white font-bold bg-blue-900" : ""
           }>
-          Add Products
+          ADD PRODUCTS
         </NavLink>
       </li>
         <li className="font-bold">
@@ -43,7 +43,7 @@ const Navbar = () => {
         </>
     )
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto py-5">
       <div className='navbar bg-base-100'>
         <div className='navbar-start'>
           <div className='dropdown'>
@@ -68,7 +68,13 @@ const Navbar = () => {
                 {navLinks}
             </ul>
           </div>
-          <a className='btn btn-ghost normal-case text-xl'>Fashion Hub</a>
+          <div className="flex items-center justify-around">
+          <div>
+          <img src={iconImg} alt=""  className="w-16 h-16"/>
+          </div>
+          <a className='btn btn-ghost normal-case text-2xl font-extrabold bg-gradient-to-r from-indigo-500 via-purple-500 to-gray-500 text-transparent bg-clip-text'>Fashion Hub</a>
+
+          </div>
         </div>
         <div className='navbar-center hidden lg:flex'>
           <ul className='menu menu-horizontal px-1'>

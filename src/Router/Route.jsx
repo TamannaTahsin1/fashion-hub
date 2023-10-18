@@ -7,21 +7,29 @@ import Footer from "../Components/Footer/Footer";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import AddProducts from "../Pages/AddProducts/AddProducts";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Product from "../Pages/Product/Product";
 
 
 const myCreatedRoute = createBrowserRouter([
     {
       path: "/",
       element:<Mainlayout></Mainlayout>,
+      errorElement:<ErrorPage></ErrorPage>,
       children: [
         {
             path:'/',
             element:<Home></Home>,
-            loader: () => fetch('http://localhost:5000/products')
+            loader: () => fetch('/data.json')
         },
         {
             path:'/addProducts',
             element: <AddProducts></AddProducts>
+        },
+        {
+            path:'/products/:brand',
+            element: <Product></Product>,
+            loader: () => fetch('http://localhost:5000/products')
         },
         {
             path:'/cart',

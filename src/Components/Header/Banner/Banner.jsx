@@ -11,7 +11,7 @@ const Banner = () => {
       <div className='hero-content text-center text-neutral-content'>
         <div className='max-w-md'>
           <h1
-            className='mb-5 text-3xl font-bold bg-gradient-to-r from-orange-500 to-red-700 text-transparent bg-clip-text'
+            className='mb-5 text-3xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-gray-500 text-transparent bg-clip-text'
             data-aos='fade-down'>
             Fashion Hub
           </h1>
