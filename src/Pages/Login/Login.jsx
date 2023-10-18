@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const handleLogin = e =>{
+    e.preventDefault()
+    const form = e.target;
+    console.log(form.name.value, form.email.value, form.password.value)
+  }
   return (
     <div>
       <div className='hero min-h-screen bg-base-200'>
@@ -9,7 +14,7 @@ const Login = () => {
             <h1 className='text-5xl font-bold'>Login now!</h1>
           </div>
           <div className='card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100'>
-            <form className='card-body'>
+            <form onSubmit={handleLogin} className='card-body'>
               <div className='form-control'>
                 <label className='label'>
                   <span className='label-text'>Name</span>
