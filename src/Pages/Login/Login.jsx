@@ -1,14 +1,40 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import SocialLogin from "./SocialLogin";
+import { useContext } from "react";
+import { AuthContext } from "../../Components/Providers/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const {signIn} = useContext(AuthContext)
+  const location = useLocation()
+  const navigate = useNavigate()
   const handleLogin = e =>{
-    e.preventDefault()
-    const form = e.target;
-    console.log(form.name.value, form.email.value, form.password.value)
+    e.preventDefault ()
+    console.log(e.currentTarget)
+    const form =new FormData(e.currentTarget)
+    const email = form.get('email')
+    const password = form.get('password')
+    console.log(email, password)
+    // create a new user
+    signIn(email, password)
+    .then(result => {
+      console.log(result.user)
+      toast.success('Successfully Logged in!',
+      {
+        icon: '👏',
+        style: {
+          borderRadius: '10px',
+          background: '#333',
+          color: '#fff',
+        },
+      })
+            // navigate user after login
+            navigate(location?.state ? location.state : '/')
+    })     
   }
   return (
     <div>
-      <div className='hero min-h-screen bg-base-200'>
+      <div className='hero h-[80vh] bg-base-200'>
         <div className='hero-content flex-col '>
           <div className='text-center lg:text-left'>
             <h1 className='text-5xl font-bold'>Login now!</h1>
@@ -62,6 +88,7 @@ const Login = () => {
                   Register
                 </Link>
               </p>
+              <SocialLogin></SocialLogin>
             </form>
           </div>
         </div>

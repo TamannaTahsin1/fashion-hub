@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Components/Providers/AuthProvider";
 // import { toast } from "react-toastify";
 import Swal from "sweetalert2";
+import toast from "react-hot-toast";
+
 
 const Register = () => {
   // error
@@ -15,6 +17,7 @@ const Register = () => {
   const { createUser } = useContext(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
+    // get field values
     const form = e.target;
     const name = form.name.value;
     const photo = form.photo.value;
@@ -23,27 +26,17 @@ const Register = () => {
     console.log(name,photo, email, password);
     // for password validation
     if (password.length < 6) {
-      Swal.fire({
-        title: 'Oops!',
-        text: 'Password should be at least one block latter and special character!',
-        icon: 'error',
-        confirmButtonText: 'Cool'
-      })
+      toast.error("Password should be at least 6 characters")
       return;
-      // "Password should be at least one block latter and special character",
-    } else if (!/^[a-zA-Z0-9._%+-]/.test(password)) {
-      Swal.fire({
-        title: 'Oops!',
-        text: 'Password should be at least one block latter and special character!',
-        icon: 'error',
-        confirmButtonText: 'Cool'
-      })
+    } 
+    else if (!/^[a-zA-Z0-9._%+-]/.test(password)) {
+      toast.error("Password should be at least 6 characters")
       return;
     }
     // reset success and error
     setRegisterError("");
     setRegisterSuccess("");
-    // create user
+    // create a new user
     createUser(email, password)
     .then((result) => {
       console.log(result.user);
@@ -77,7 +70,7 @@ const Register = () => {
   };
   return (
     <div>
-      <div className='hero min-h-screen bg-base-200'>
+      <div className='hero h-[80vh] bg-base-200'>
         <div className='hero-content flex-col'>
           <div className='text-center lg:text-left'>
             <h1 className='text-5xl font-bold'>Register now!</h1>

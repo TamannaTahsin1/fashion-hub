@@ -1,7 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
 import iconImg from '../../assets/logo.png'
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const Navbar = () => {
+    // accessing context
+    const {user, logOut} = useContext(AuthContext)
+    // for signing out
+    const handleSignOut = ()=>{
+      logOut()
+      .then()
+      .catch()
+    }
     const navLinks = (
         <>
         <li className="font-bold">
@@ -81,10 +91,35 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <div className='navbar-end'>
-          <Link to='/login'>
-          <button className="btn btn-accent">Login</button>
+        <div className='navbar-end flex gap-10'>
+          {
+            user?.email ?           
+            <label tabIndex={0}>
+            <div className='w-20 rounded-xl'>
+            <button className="btn bg-pink-400 text-white">{user.displayName}</button>
+            </div>
+          </label>
+          :
+          ('')
+          }
+          {
+            user?.email ?           
+            <label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
+            <div className='w-10 rounded-full'>
+              <img src={user.photoURL} />
+            </div>
+          </label>
+          :
+          ('')
+          }
+          {
+            user ?
+            <button onClick={handleSignOut} className='btn bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-pink-500 hover:to-indigo-500 text-white ml-4'>Log Out</button>
+            :
+            <Link to='/login'>
+            <button className='btn bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-pink-500 hover:to-indigo-500 text-white ml-4'>Log in</button>
           </Link>
+          }
         </div>
       </div>
     </div>
