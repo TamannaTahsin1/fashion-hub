@@ -9,6 +9,7 @@ import Register from "../Pages/Register/Register";
 import AddProducts from "../Pages/AddProducts/AddProducts";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Product from "../Pages/Product/Product";
+import Users from "../Components/Users/Users";
 
 
 const myCreatedRoute = createBrowserRouter([
@@ -33,11 +34,16 @@ const myCreatedRoute = createBrowserRouter([
         },
         {
             path:'/cart',
-            element: <Cart></Cart>
+            element: <Cart></Cart>,
+            loader: () => fetch('http://localhost:5000/cart')
         },
         {
             path:'/sponsor',
             element: <Sponsor></Sponsor>
+        },
+        {
+            path:'/users',
+            element:<Users></Users>
         },
         {
             path:'/login',

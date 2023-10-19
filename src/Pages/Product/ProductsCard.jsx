@@ -1,5 +1,6 @@
 
 import { FaCartPlus } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 // eslint-disable-next-line react/prop-types
 const ProductsCard = ({ product }) => {
@@ -7,8 +8,20 @@ const ProductsCard = ({ product }) => {
 
     
     const handleAddToCart = () =>{
-
-
+      const cartProduct = {name, photo, price };
+      fetch('http://localhost:5000/cart',{
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(cartProduct)
+      })
+      Swal.fire({
+        title: 'Success!',
+        text: 'Product added successfully!',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
   }
   return (
     <div>

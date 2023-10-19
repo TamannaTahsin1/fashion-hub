@@ -1,10 +1,8 @@
-/** @format */
-
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Components/Providers/AuthProvider";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 
 const Register = () => {
@@ -19,9 +17,10 @@ const Register = () => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
+    const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, email, password);
+    console.log(name,photo, email, password);
     // for password validation
     if (password.length < 6) {
       Swal.fire({
@@ -45,7 +44,8 @@ const Register = () => {
     setRegisterError("");
     setRegisterSuccess("");
     // create user
-    createUser(email, password).then((result) => {
+    createUser(email, password)
+    .then((result) => {
       console.log(result.user);
       Swal.fire({
         title: 'Success!',
