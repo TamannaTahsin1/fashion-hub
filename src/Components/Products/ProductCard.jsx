@@ -7,7 +7,7 @@ const ProductCard = ({ product }) => {
     <div>
       <Link to={`/products/${brand}`}>
       <button>
-        <div className='card w-80 bg-base-100 shadow-xl image-full'>
+        <div className='card w-80 bg-base-100 shadow-xl image-full' data-aos="zoom-in-up">
           <figure>
             <img src={image} alt='Shoes' />
           </figure>

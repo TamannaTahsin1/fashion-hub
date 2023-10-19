@@ -37,7 +37,8 @@ const AddProducts = () => {
         })
     }
     return (
-        <div className="container mx-auto mt-20">
+        <div className="container mx-auto mt-20" data-aos="fade-up"
+        data-aos-duration="500">
                 <div className=" bg-slate-200 p-20 ">
       <h2 className="text-3xl font-semibold text-blue-500">Add Your Favorite Product</h2>
       <form onSubmit={handleAddProducts}>

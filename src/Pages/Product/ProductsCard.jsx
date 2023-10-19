@@ -1,4 +1,3 @@
-
 import { FaCartPlus } from "react-icons/fa";
 import Swal from "sweetalert2";
 
@@ -37,8 +36,7 @@ const ProductsCard = ({ product }) => {
           <div className='card-actions'>
             <button
             onClick={handleAddToCart}
-            className='btn btn-primary'>
-            
+            className='btn bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-pink-500 hover:to-indigo-500 text-white'>          
               Add to Cart <FaCartPlus></FaCartPlus>
             </button>
           </div>
