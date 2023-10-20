@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import ProductsCard from "./ProductsCard";
+import ProductSDetailCard from "./ProductSDetailCard";
+import ProductSlider from "./ProductSlider";
 
 
-const Product = () => {
+const ProductsDetail = () => {
     const [product, setProduct] = useState([])
     const {brand} = useParams()
-    // console.log(brand)
+    console.log(brand)
     // loader data
     const products = useLoaderData()
     // console.log(products)
@@ -19,12 +20,17 @@ const Product = () => {
     },[brand, products])
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 container mx-auto">
+        <div>
+          <div className="container mx-auto">
+            <ProductSlider></ProductSlider>
+          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 container mx-auto gap-5">
           {
-            product?.map(product => <ProductsCard key={product._id} product={product}></ProductsCard>)
+            product?.map(product => <ProductSDetailCard key={product._id} product={product}></ProductSDetailCard>)
           }
+        </div>
         </div>
     );
 };
 
-export default Product;
+export default ProductsDetail;

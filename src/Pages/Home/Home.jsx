@@ -8,7 +8,7 @@ import Review from "../../Components/Review/Review";
 
 const Home = () => {
     const products = useLoaderData()
-    console.log(products)
+    // console.log(products)
 
     return (
         <div>
