@@ -36,7 +36,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-white font-bold bg-blue-900"
+              ? "text-white font-bold bg-purple-600"
               : ""
           }>
           HOME
@@ -49,7 +49,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-white font-bold bg-blue-900"
+              ? "text-white font-bold bg-purple-600"
               : ""
           }>
           ADD PRODUCTS
@@ -62,7 +62,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-white font-bold bg-blue-900"
+              ? "text-white font-bold bg-purple-600"
               : ""
           }>
           CART
@@ -75,7 +75,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-white font-bold bg-blue-900"
+              ? "text-white font-bold bg-purple-600"
               : ""
           }>
           SPONSOR

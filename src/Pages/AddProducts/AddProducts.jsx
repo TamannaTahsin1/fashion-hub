@@ -40,7 +40,7 @@ const AddProducts = () => {
         <div className="container mx-auto mt-20" data-aos="fade-up"
         data-aos-duration="500">
                 <div className=" bg-slate-200 p-20 ">
-      <h2 className="text-3xl font-semibold text-blue-500">Add Your Favorite Product</h2>
+      <h2 className="text-3xl font-semibold text-purple-600">Add Your Favorite Products</h2>
       <form onSubmit={handleAddProducts}>
         {/* form brand name and product name row */}
         <div className="md:flex gap-3">
@@ -130,7 +130,7 @@ const AddProducts = () => {
           </div>
         </div>
         <div>
-        <input type="submit" value="Add Products" className="btn btn-block"/>
+        <input type="submit" value="Add Products" className="btn bg-gradient-to-r from-pink-500 to-indigo-500 hover:from-cyan-500 hover:to-blue-500 text-white w-full"/>
         </div>
        
       </form>

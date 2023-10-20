@@ -7,6 +7,7 @@ const Product = () => {
     const [product, setProduct] = useState()
     const {brand} = useParams()
     console.log(brand)
+    // loader data
     const products = useLoaderData()
     console.log(products)
 

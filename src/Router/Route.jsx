@@ -40,7 +40,8 @@ const myCreatedRoute = createBrowserRouter([
         },
         {
             path:'/sponsor',
-            element: <Sponsor></Sponsor>
+            element: <PrivateRoute><Sponsor></Sponsor></PrivateRoute>,
+            loader: () => fetch('/sponsor.json')
         },
         {
             path:'/users',
