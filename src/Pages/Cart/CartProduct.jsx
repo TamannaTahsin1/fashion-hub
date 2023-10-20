@@ -34,10 +34,10 @@ const CartProduct = ({ cartItem, cartDelItems, setCartDelItems }) => {
             }
           })
     }
-
+    
   return (
     <div>
-      <div className='card card-compact w-80 bg-base-100 shadow-xl' data-aos="zoom-in-up">
+      <div className='card card-compact w-80 bg-base-100 shadow-xl' data-aos="flip-right">
         <figure>
           <img
             src={photo}
@@ -54,7 +54,7 @@ const CartProduct = ({ cartItem, cartDelItems, setCartDelItems }) => {
         <div className="card-actions  justify-end pr-5 pb-5">
       <button
       onClick={() => handleDelete(_id)}
-      className="btn bg-purple-500 rounded-full text-white">X</button>
+      className="btn bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-pink-500 hover:to-indigo-500 text-white">X</button>
     </div>
       </div>
     </div>

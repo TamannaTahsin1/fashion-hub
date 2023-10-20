@@ -24,14 +24,14 @@ const ProductsCard = ({ product }) => {
   }
   return (
     <div>
-      <div className='card w-96 bg-base-100 shadow-xl'>
+      <div className='card w-96 bg-base-100 shadow-xl' data-aos="flip-right">
         <figure className='px-10 pt-10'>
           <img src={photo} alt='Shoes' className='rounded-xl' />
         </figure>
         <div className='card-body items-center text-center'>
-          <h2>{brand}</h2>
+          <h2 className="text-blue-400">{brand}</h2>
           <h2 className='card-title'>{name}</h2>
-          <p>{details}</p>
+          <p className="text-gray-400">{details}</p>
           <p className='font-bold'>Price: {price}</p>
           <div className='card-actions'>
             <button

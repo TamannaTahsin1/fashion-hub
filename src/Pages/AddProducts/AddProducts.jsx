@@ -130,7 +130,7 @@ const AddProducts = () => {
           </div>
         </div>
         <div>
-        <input type="submit" value="Add Products" className="btn bg-gradient-to-r from-pink-500 to-indigo-500 hover:from-cyan-500 hover:to-blue-500 text-white w-full"/>
+        <input type="submit" value="Add Products" className="btn border-none bg-gradient-to-r from-pink-500 to-indigo-500 hover:from-cyan-500 hover:to-blue-500 text-white w-full"/>
         </div>
        
       </form>

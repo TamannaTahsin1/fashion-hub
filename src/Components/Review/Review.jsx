@@ -38,8 +38,7 @@ const Review = () => {
                 While I enjoyed the cosplay and the energetic atmosphere, I was
                 disappointed <br /> by the lack of new game announcements.
               </p>
-              <h2 className='card-title'>Evadne Rainewillow</h2>
-              <p className='text-lg text-red-700'>Visitor</p>
+              <h2 className='card-title text-blue-400'>Evadne Rainewillow</h2>
             </div>
           </div>
         </div>
@@ -63,8 +62,7 @@ const Review = () => {
                 While I enjoyed the cosplay and the energetic atmosphere, I was
                 disappointed <br /> by the lack of new game announcements.
               </p>
-              <h2 className='card-title'>Xander Thornfield</h2>
-              <p className='text-lg text-red-700'>Visitor</p>
+              <h2 className='card-title text-blue-400'>Xander Thornfield</h2>
             </div>
           </div>
         </div>
@@ -88,8 +86,7 @@ const Review = () => {
                 The esports tournaments were intense, and the VR demos were
                 mind-blowing.
               </p>
-              <h2 className='card-title'>Zephyr Nightshade</h2>
-              <p className='text-lg text-red-700'>Visitor</p>
+              <h2 className='card-title text-blue-400'>Zephyr Nightshade</h2>
             </div>
           </div>
         </div>
@@ -113,8 +110,7 @@ const Review = () => {
                 The esports tournaments were intense, and the VR demos were
                 mind-blowing.
               </p>
-              <h2 className='card-title'>Seraphina Everhart</h2>
-              <p className='text-lg text-red-700'>Visitor</p>
+              <h2 className='card-title text-blue-400'>Seraphina Everhart</h2>
             </div>
           </div>
         </div>
