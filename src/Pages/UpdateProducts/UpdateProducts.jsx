@@ -29,7 +29,7 @@ const UpdateProducts = ({ product }) => {
     console.log(updateProducts);
 
     // send data to the server
-    fetch(`http://localhost:5000/products/${_id}`, {
+    fetch(`https://fashion-hub-server-c0gv1u9kj-tamanna-tahsins-projects.vercel.app/products/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

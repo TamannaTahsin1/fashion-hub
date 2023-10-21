@@ -6,7 +6,7 @@
 #### Question 1:Project Name and Live link
 
 Answer 1: Fashion Hub.
-Live link: 
+Live link: https://fashion-hub-client.web.app/
 
 ### Key Features:
 This fashion brand website utilizes a robust database system to efficiently store, retrieve, update, and delete product information, ensuring seamless management of its extensive catalog. Additionally, it features a secure login authentication system, safeguarding user accounts and enhancing personalized shopping experiences. This integration of database functionality and user authentication enriches the website's performance and user satisfaction.

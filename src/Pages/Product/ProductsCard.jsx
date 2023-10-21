@@ -8,7 +8,7 @@ const ProductsCard = ({ product }) => {
     
     const handleAddToCart = () =>{
       const cartProduct = {name, photo, price };
-      fetch('http://localhost:5000/cart',{
+      fetch('https://fashion-hub-server-c0gv1u9kj-tamanna-tahsins-projects.vercel.app/cart',{
         method: 'POST',
         headers: {
           'content-type': 'application/json'

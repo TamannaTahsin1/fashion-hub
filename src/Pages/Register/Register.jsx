@@ -48,7 +48,7 @@ const Register = () => {
       })
       // new user has been created  
       const user = {name, email}
-      fetch('http://localhost:5000/user',{
+      fetch('https://fashion-hub-server-c0gv1u9kj-tamanna-tahsins-projects.vercel.app/user',{
         method:'POST',
         headers: {
           'content-type' : 'application/json'

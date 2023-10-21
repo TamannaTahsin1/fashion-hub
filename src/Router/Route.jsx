@@ -38,22 +38,22 @@ const myCreatedRoute = createBrowserRouter([
         {
             path:'/products/:brand',
             element: <PrivateRoute><Product></Product></PrivateRoute>,
-            loader: () => fetch('http://localhost:5000/products')
+            loader: () => fetch('https://fashion-hub-server-c0gv1u9kj-tamanna-tahsins-projects.vercel.app/products')
         },
         {
             path:'/productsDetail/:brand',
             element: <PrivateRoute><ProductsDetail></ProductsDetail></PrivateRoute>,
-            loader: () => fetch('http://localhost:5000/products')
+            loader: () => fetch('https://fashion-hub-server-c0gv1u9kj-tamanna-tahsins-projects.vercel.app/products')
         },
         {
             path:'/updateProduct/:id',
             element: <UpdateProducts></UpdateProducts>,
-            loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+            loader: ({params}) => fetch(`https://fashion-hub-server-c0gv1u9kj-tamanna-tahsins-projects.vercel.app/products/${params.id}`)
         },
         {
             path:'/cart',
             element: <PrivateRoute><Cart></Cart></PrivateRoute>,
-            loader: () => fetch('http://localhost:5000/cart')
+            loader: () => fetch('https://fashion-hub-server-c0gv1u9kj-tamanna-tahsins-projects.vercel.app/cart')
         },
         {
             path:'/sponsor',

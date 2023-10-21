@@ -19,7 +19,7 @@ const AddProducts = () => {
     console.log(newProducts);
 
     // send data to the server
-    fetch("http://localhost:5000/products", {
+    fetch("https://fashion-hub-server-c0gv1u9kj-tamanna-tahsins-projects.vercel.app/products", {
       method: "POST",
       headers: {
         "content-type": "application/json",
