@@ -125,7 +125,7 @@ const Navbar = () => {
           {user?.email ? (
             <label tabIndex={0}>
               <div className='w-20 rounded-xl'>
-                <button className='btn bg-purple-400 text-white'>
+                <button className='btn btn-ghost text-white'>
                   {user.displayName}
                 </button>
               </div>
@@ -145,12 +145,12 @@ const Navbar = () => {
           {user ? (
             <button
               onClick={handleSignOut}
-              className='btn bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-pink-500 hover:to-indigo-500 text-white ml-4'>
+              className='btn border-none bg-gradient-to-r from-pink-500 to-indigo-500 hover:from-cyan-500 hover:to-blue-500 text-white'>
               Log Out
             </button>
           ) : (
             <Link to='/login'>
-              <button className='btn bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-pink-500 hover:to-indigo-500 text-white ml-4'>
+              <button className='btn border-none bg-gradient-to-r from-pink-500 to-indigo-500 hover:from-cyan-500 hover:to-blue-500 text-white'>
                 Log in
               </button>
             </Link>

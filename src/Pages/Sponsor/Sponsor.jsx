@@ -21,7 +21,7 @@ const Sponsor = () => {
         <div className='md:flex justify-center items-center' data-aos="zoom-in-up">
           <button
             onClick={() => setDataLength(sponsorBrands.length)}
-            className='btn bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-pink-500 hover:to-indigo-500 text-white ml-4'>
+            className='btn border-none bg-gradient-to-r from-pink-500 to-indigo-500 hover:from-cyan-500 hover:to-blue-500 text-white'>
             Show all Sponsors
           </button>
         </div>

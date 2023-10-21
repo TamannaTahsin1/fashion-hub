@@ -37,25 +37,30 @@ const CartProduct = ({ cartItem, cartDelItems, setCartDelItems }) => {
     
   return (
     <div>
-      <div className='card card-compact w-80 bg-base-100 shadow-xl' data-aos="flip-right">
-        <figure>
+      <div className='card card-compact w-full bg-base-100 shadow-xl' data-aos="flip-right">
+        <div className="flex justify-around gap-5">
+        <div>
+      <figure>
           <img
             src={photo}
             alt='product img'
-            className="w-80"
+            className="w-80 h-full"
           />
         </figure>
+      </div>
         <div className='card-body'>
             <h5>{brand}</h5>
           <h2 className='card-title'>{name}</h2>
           <p>{details}</p>
-          <p>Price: ${price}</p>
+          <p><span className="font-semibold">Price:</span> ${price}</p>
         </div>
-        <div className="card-actions  justify-end pr-5 pb-5">
+        <div className="card-actions justify-end pr-5 pb-5">
       <button
       onClick={() => handleDelete(_id)}
       className="btn bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-pink-500 hover:to-indigo-500 text-white">X</button>
     </div>
+        </div>
+
       </div>
     </div>
   );

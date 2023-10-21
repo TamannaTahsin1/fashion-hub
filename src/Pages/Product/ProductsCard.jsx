@@ -25,9 +25,11 @@ const ProductsCard = ({ product }) => {
   return (
     <div>
       <div className='card w-96 bg-base-100 shadow-xl' data-aos="flip-right">
+        <div>
         <figure className='px-10 pt-10'>
           <img src={photo} alt='Shoes' className='rounded-xl' />
         </figure>
+        </div>
         <div className='card-body items-center text-center'>
           <h2 className="text-blue-400">{brand}</h2>
           <h2 className='card-title'>{name}</h2>

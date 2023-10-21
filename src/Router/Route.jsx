@@ -13,6 +13,7 @@ import Users from "../Components/Users/Users";
 import PrivateRoute from "./PrivateRoute";
 import ProductsDetail from "../Pages/ProductsDetail/ProductsDetail";
 import UpdateProducts from "../Pages/UpdateProducts/UpdateProducts";
+import About from "../Pages/About/About";
 
 
 const myCreatedRoute = createBrowserRouter([
@@ -29,6 +30,10 @@ const myCreatedRoute = createBrowserRouter([
         {
             path:'/addProducts',
             element: <PrivateRoute><AddProducts></AddProducts></PrivateRoute>
+        },
+        {
+            path:'/about',
+            element: <About></About>
         },
         {
             path:'/products/:brand',

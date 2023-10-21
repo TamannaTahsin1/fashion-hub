@@ -12,8 +12,8 @@ const UpdateProducts = ({ product }) => {
   const [name, setName ] = useState(updateProduct?.name || '' )
   const [rating, setRating ] = useState(updateProduct?.rating || '' )
   console.log(updateProduct);
-  const { _id, price,  } = product || {};
-
+  const { _id, price,  } = updateProduct || {};
+  // console.log(product)
   const handleUpdateProducts = (e) => {
     e.preventDefault();
 
