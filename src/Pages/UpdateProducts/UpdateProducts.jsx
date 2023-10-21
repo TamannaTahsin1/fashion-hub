@@ -23,9 +23,10 @@ const UpdateProducts = ({ product }) => {
     const details = form.details.value;
     const rating = form.rating.value;
     const price = form.price.value;
+    const category = form.category.value;
     const photo = form.photo.value;
 
-    const updateProducts = { brand, name, details, rating, price, photo };
+    const updateProducts = { brand, name, details, rating, price, category, photo };
     console.log(updateProducts);
 
     // send data to the server
@@ -124,7 +125,7 @@ const UpdateProducts = ({ product }) => {
               </div>
             </div>
             {/* form price and img row */}
-            <div className='md:flex gap-3 mb-8'>
+            <div className='md:flex gap-3'>
               <div className='form-control md:w-1/2'>
                 <label className='label'>
                   <span className='label-text'>Price</span>
@@ -140,6 +141,25 @@ const UpdateProducts = ({ product }) => {
                 </label>
               </div>
               <div className='form-control md:w-1/2'>
+              <label className='label'>
+                <span className='label-text'>Category</span>
+              </label>
+              <label className='input-group'>
+                <select
+                  name='category'
+                  type='text'
+                  placeholder='my categories'
+                  className='input input-bordered w-full'
+                >
+                  <option >Choose Categories</option>
+                  <option value="shirt">Shirt</option>
+                  <option value="tShirt">T-Shirt</option>
+                  <option value="shoe">Shoe</option>
+                </select>
+              </label>
+            </div>
+            </div>
+            <div className='form-control md:w-1/2 mb-8'>
                 <label className='label'>
                   <span className='label-text'>Photo URL</span>
                 </label>
@@ -153,7 +173,6 @@ const UpdateProducts = ({ product }) => {
                   />
                 </label>
               </div>
-            </div>
             <div>
               <input
                 type='submit'

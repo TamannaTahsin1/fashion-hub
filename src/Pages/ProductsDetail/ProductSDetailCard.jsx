@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const ProductSDetailCard = ({ product }) => {
-  const { _id, brand, photo, details, price, name } = product || {};
+  const { _id, brand, photo, details, price, category, name } = product || {};
 
   return (
     <div>
@@ -14,6 +14,7 @@ const ProductSDetailCard = ({ product }) => {
           <h2 className='text-blue-400'>{brand}</h2>
           <h2 className='card-title'>{name}</h2>
           <p className='text-gray-400'>{details}</p>
+          <p className='font-bold'>Category: Shirt {category}</p>
           <p className='font-bold'>Price: {price}</p>
           <div className='rating rating-sm'>
             <input

@@ -13,9 +13,10 @@ const AddProducts = () => {
     const details = form.details.value;
     const rating = form.rating.value;
     const price = form.price.value;
+    const category = form.category.value;
     const photo = form.photo.value;
 
-    const newProducts = { brand, name, details, rating, price, photo };
+    const newProducts = { brand, name, details, rating, price, category, photo };
     console.log(newProducts);
 
     // send data to the server
@@ -109,7 +110,7 @@ const AddProducts = () => {
             </div>
           </div>
           {/* form price and img row */}
-          <div className='md:flex gap-3 mb-8'>
+          <div className='md:flex gap-3'>
             <div className='form-control md:w-1/2'>
               <label className='label'>
                 <span className='label-text'>Price</span>
@@ -124,6 +125,26 @@ const AddProducts = () => {
               </label>
             </div>
             <div className='form-control md:w-1/2'>
+              <label className='label'>
+                <span className='label-text'>Category</span>
+              </label>
+              <label className='input-group'>
+                <select
+                  name='category'
+                  type='text'
+                  placeholder='my categories'
+                  className='input input-bordered w-full'
+                >
+                  <option disabled>Choose Categories</option>
+                  <option value="shirt">Shirt</option>
+                  <option value="tShirt">T-Shirt</option>
+                  <option value="shoe">Shoe</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div>
+          <div className='form-control md:w-1/2 mb-8'>
               <label className='label'>
                 <span className='label-text'>Photo URL</span>
               </label>
