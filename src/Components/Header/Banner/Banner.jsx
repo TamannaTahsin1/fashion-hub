@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa';
 const Banner = () => {
   return (
     <div
-      className='container mx-auto hero h-[70vh]'
+      className='container mx-auto hero h-[70vh] overflow-hidden'
       data-aos="fade-left"
       style={{
         backgroundImage: "url(./bg.jpg)",
