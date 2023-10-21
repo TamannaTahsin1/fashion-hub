@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 const Login = () => {
   const {signIn} = useContext(AuthContext)
   const location = useLocation()
+  console.log(location)
   const navigate = useNavigate()
   const handleLogin = e =>{
     e.preventDefault ()
